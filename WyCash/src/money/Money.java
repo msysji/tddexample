@@ -23,15 +23,15 @@ class Money {
 	protected String currency() {
 		return currency;
 	}
-	protected Money times(int multiplier) {
+	Money times(int multiplier) {
 		return new Money(amount * multiplier, currency);
 	}
 
 	static Money dollar(int amount) {
-		return new Dollar(amount, "USD");
+		return new Money(amount, "USD");
 	}
 
 	static Money franc(int amount) {
-		return new Franc(amount, "CHF");
+		return new Money(amount, "CHF");
 	}
 }
